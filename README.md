@@ -18,6 +18,8 @@
   Open file inside your favorite text editor, run npm install inside the terminal, run nodemon server.js to begin the server. Once connected, you can use Postman or Insomnia to browse your friends database.
 
   ## Usage
+  Video Walkthrough:  https://watch.screencastify.com/v/fgtnSkNzrL7mAM2ISa9z
+  
   I suppose if I ever felt the normal way I keep track of my friends would fail someday, then I could use this to always know how many friends I ever had...
 
   ## License
