@@ -22,14 +22,12 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-  // create a new user
   createUser(req, res) {
     User.create(req.body)
       .then((user) => res.json(user))
       .catch((err) => res.status(500).json(err));
   },
 
-  // update a user by its _id and return the updated user
   updateUser(req, res) {
     User.findOneAndUpdate({ _id: req.params.userId }, req.body, {
       new: true,
@@ -43,7 +41,6 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  // delete a user by its _id
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
       .then((user) =>
@@ -53,8 +50,6 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-
-  // add a new friend to a user's friend list
   addFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
@@ -69,7 +64,6 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  // remove a friend from a user's friend list
   deleteFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
